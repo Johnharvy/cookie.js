@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Second</title>
+    <script src="./cookie.js"></script>
+</head>
+<body>
+<div class="userName"></div>
+<div class="password"></div>
+<script>
+    var a = cookie.getCookie();
+    console.log(a);
+    cookie.setCookie("userName","ccc");
+    console.log(cookie.getCookie());
+    cookie.clearCookie();
+    console.log(cookie.getCookie());
+    cookie.setCookie("a1",111);
+    cookie.setCookie("b2",222);
+    cookie.setCookie("c3",333);
+    console.log(cookie.getCookie());
+    cookie.removeCookie("c3");
+    console.log(cookie.getCookie());
+    console.log(cookie.getCookiePro("bb"));
+
+
+</script>
+</body>
+</html>
