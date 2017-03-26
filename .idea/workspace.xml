@@ -18,17 +18,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cookie.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cookie.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cookie.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
@@ -186,12 +176,12 @@
       <updated>1490531445486</updated>
       <workItem from="1490531446693" duration="6960000" />
       <workItem from="1490539455396" duration="35000" />
-      <workItem from="1490539504750" duration="1075000" />
+      <workItem from="1490539504750" duration="1203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8070000" />
+    <option name="totallyTimeSpent" value="8198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="119" y="23" width="1280" height="714" extended-state="0" />
