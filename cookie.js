@@ -15,11 +15,33 @@ var cookie = (function(){
       }
 
       //设置cookie相应项
-      this.setCookie = function(pro,val){
+      this.setCookie = function(pro,val,mountDays,path){
           if(typeof val === "object")  {
               console.error("cookie property can't be object.");
               return;
           }
+
+          if(mountDays){
+
+          if (typeof  mountDays != "number" || mountDays != "") {
+              console.error("the parameter must be number");
+              return;
+          }else if(mountDays === ""){
+              if(path) document.cookie = pro +"="+ val + ";path=" + path;
+              else  document.cookie = pro +"="+ val;
+              return;
+          }
+
+          var _a = 1000 * 60 * 60 * 24;
+          var _end = mountDays * _a;
+          var now = new Date();
+          now.setTime(now.getTime() + _end);
+
+          if(path)
+          document.cookie = pro +"="+ val +";expires=" + now.toGMTString();
+          }
+
+
           document.cookie = pro +"="+ val;
       }
 
@@ -54,7 +76,8 @@ var cookie = (function(){
               document.cookie = x + ";expires=Thu, 01 Jan 1970 00:00:00 GMT";
           }
       }
-      return this;
+
+    return this;
 
 }).call(Object.create(null));
 
