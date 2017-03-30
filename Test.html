@@ -15,9 +15,11 @@
 //        console.log(now.toGMTString());
 
 //        console.log("GTM格式:"+ now.getTime().toGMTString());
-        cookie.setCookie("name","zxy");
-        cookie.setCookiePath("./");
-        cookie.setCookieTime(1);
+        cookie.setCookie("name","zxy",1/24/60/12,"./");
+        console.log(cookie.getCookie());
+        setTimeout(function(){console.log(
+            cookie.getCookie()
+        )},10000);
     </script>
 </body>
 </html>

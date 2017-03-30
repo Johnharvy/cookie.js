@@ -14,34 +14,35 @@ var cookie = (function(){
           return _ck;
       }
 
-      //设置cookie相应项
+      //设置cookie相应项,mountDays单位为天数,默认为一个会话周期,即退出当前浏览器时消失，
+      //path表示表示哪些路径下的文件有权限读取该cookie
       this.setCookie = function(pro,val,mountDays,path){
           if(typeof val === "object")  {
               console.error("cookie property can't be object.");
               return;
           }
+          if(mountDays) { //存在mountDays
+              if (typeof  mountDays != "number" && mountDays != "") {
+                  console.error("the parameter must be number");
+                  return;
+              } else if (mountDays === "") { //mountDays为""
+                  if (path) document.cookie = pro + "=" + val + ";path=" + path;
+                  else  document.cookie = pro + "=" + val;
+                  return;
+              }
 
-          if(mountDays){
+              var _a = 1000 * 60 * 60 * 24;
+              var _end = mountDays * _a;
+              var now = new Date();
+              now.setTime(now.getTime() + _end);
 
-          if (typeof  mountDays != "number" || mountDays != "") {
-              console.error("the parameter must be number");
-              return;
-          }else if(mountDays === ""){
-              if(path) document.cookie = pro +"="+ val + ";path=" + path;
-              else  document.cookie = pro +"="+ val;
+              if(path) document.cookie = pro + "=" + val + ";expires=" + now.toGMTString() + ";path=" + path;
+
+              console.log(now.toGMTString());
+              document.cookie = pro + "=" + val + ";expires=" + now.toGMTString();
+              console.log(document.cookie);
               return;
           }
-
-          var _a = 1000 * 60 * 60 * 24;
-          var _end = mountDays * _a;
-          var now = new Date();
-          now.setTime(now.getTime() + _end);
-
-          if(path)
-          document.cookie = pro +"="+ val +";expires=" + now.toGMTString();
-          }
-
-
           document.cookie = pro +"="+ val;
       }
 
@@ -76,9 +77,7 @@ var cookie = (function(){
               document.cookie = x + ";expires=Thu, 01 Jan 1970 00:00:00 GMT";
           }
       }
-
     return this;
-
 }).call(Object.create(null));
 
 //支持同步与异步模块化加载方式
