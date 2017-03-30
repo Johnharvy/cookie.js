@@ -35,12 +35,8 @@ var cookie = (function(){
               var _end = mountDays * _a;
               var now = new Date();
               now.setTime(now.getTime() + _end);
-
               if(path) document.cookie = pro + "=" + val + ";expires=" + now.toGMTString() + ";path=" + path;
-
-              console.log(now.toGMTString());
               document.cookie = pro + "=" + val + ";expires=" + now.toGMTString();
-              console.log(document.cookie);
               return;
           }
           document.cookie = pro +"="+ val;
