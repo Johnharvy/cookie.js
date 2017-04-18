@@ -31,7 +31,7 @@ var cookie = (function(){
                   return;
               }
 
-              var _a = 1000 * 60 * 60 * 24;
+              var _a = 1000 * 60 * 60 * 24 * 10/10;
               var _end = mountDays * _a;
               var now = new Date();
               now.setTime(now.getTime() + _end);
