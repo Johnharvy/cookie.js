@@ -75,6 +75,7 @@ var cookie = (function(){
       }
     return this;
 }).call(Object.create(null));
+console.log("345");
 
 //支持同步与异步模块化加载方式
 if (typeof module != "undefined" && module !== null && module.exports) module.exports = cookie;
