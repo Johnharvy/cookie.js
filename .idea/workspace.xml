@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb3ea8b2-f7fc-40df-a645-e12d056d150a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookie.js" afterPath="$PROJECT_DIR$/cookie.js" />
-    </list>
+    <list default="true" id="fb3ea8b2-f7fc-40df-a645-e12d056d150a" name="Default" comment="" />
     <ignored path="cookie.js.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
