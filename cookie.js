@@ -69,12 +69,15 @@ var cookie = (function(){
       //清空cookie
       this.clearCookie = function(){
           var _arr = document.cookie.split(";");
-          for(var x of _arr){
+          for(var x in _arr){
               document.cookie = x + ";expires=Thu, 01 Jan 1970 00:00:00 GMT";
           }
       }
     return this;
 }).call(Object.create(null));
+
+
+console.log(123);
 
 //支持同步与异步模块化加载方式
 if (typeof module != "undefined" && module !== null && module.exports) module.exports = cookie;
