@@ -75,6 +75,7 @@ var cookie = (function(){
       }
     return this;
 }).call(Object.create(null));
+console.log("345");
 
 
 console.log(123);
