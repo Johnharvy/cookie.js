@@ -1,14 +1,18 @@
-var cookie = (function(){
+/**
+ *  name : cookie || common-cookie
+ *  vesion : 0.0.1
+ */
+ window.cookie = (function(){
       this.baseInfor = {
-          v:1.0,
-          author:"剑英"
+          v:'0.0.1',
+          author:"心语"
       }
 
       //获取cookie对象
       this.getCookies  = function(){
-          var _cookie = document.cookie;
-          var _arr = _cookie.split("; ");
-          var _ck = Object.create(null);
+          var _cookie = document.cookie,
+              _arr = _cookie.split("; "),
+              _ck = Object.create(null);
 
           _arr.forEach(function(item){
           if(item.indexOf("=") > -1){
@@ -50,7 +54,7 @@ var cookie = (function(){
       }
 
 
-      //删除cookie相应项
+      //删除cookie相应项(非同域情况不能删除)
       this.clear = function(pro){
            var _p = this.getCookies();
            _p = _p[pro];
@@ -62,7 +66,7 @@ var cookie = (function(){
       }
 
 
-      //清空cookie
+      //清空cookie（非同域不能清除）
       this.clearCookies = function(path){
           var _arr = document.cookie.split("; ");
           _arr.forEach(function(item){
