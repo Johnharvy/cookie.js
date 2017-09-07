@@ -1,6 +1,6 @@
 # Cookie.js——小巧简单的cookie设置器
 #### 导语
->[cookie.js]() 是一个用来处理cookie数据管理的函数库，非常简单，一看就会用，希望你会用上它。
+>[cookie.js]('https://johnharvy.github.io/2017/09/07/cookie-js/') 是一个用来处理cookie数据管理的函数库，非常简单，一看就会用，希望你会用上它。
 
 
 ## cookie.js的用法
