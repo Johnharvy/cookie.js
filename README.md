@@ -5,7 +5,7 @@
 
 ## cookie.js的用法
 
-###安装
+### 安装
     npm i commom-cookie
 
 ### 设置cookie项
