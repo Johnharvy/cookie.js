@@ -2,7 +2,7 @@
   "name": "common-cookie",
   "version": "0.0.4",
   "description": " Deal with transactions about cookie ",
-  "main": "common-cookie.js",
+  "main": "dist/common-cookie.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -56,20 +56,21 @@
        *    - @param {Boolean}  secure
        */
       this.set = function(key,val,et){
+          console.log(new Number(et.expires).valueOf(),'000')
           if(typeof val === 'undefined' ||  val  === '') {console.error("value can't be undefined or empty!");return;}
           var _a = 1000 * 60 * 60 * 24 * 10/10, now = new Date();
           if(typeof et === "object"){
               var v,p,e,d,s;
               v = key + "=" + decodeURIComponent(val);
               p = et.path?  "; path=" + et.path : "" ;
-              e = (typeof et.expires === "number" && et.expires > 0)? "; expires="+ (now.setTime( now.getTime() + _a * et.expires ) && (now.toGMTString()))  : "";
+              e = (new Number(et.expires).valueOf() > 0)? "; expires="+ (now.setTime( now.getTime() + _a * (new Number(et.expires).valueOf()) ) && (now.toGMTString()))  : "";
               d = et.domain?  "; domain=" + et.domain : "";
               s = et.secure?  "; secure":"";
               return document.cookie = [v,p,e,d,s].join("");
           }else{
              return document.cookie = key + "=" + val;
           }
-
+      
       }
 
       /**

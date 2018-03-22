@@ -3,7 +3,7 @@
 >[common-cookie.js](https://johnharvy.github.io/2017/09/07/cookie-js/) 是一个用来处理cookie数据管理的函数库，非常简单，一看就会用，希望你会用上它。
 
 
-## cookie.js的用法
+## common-cookie.js的用法
 
 ### 安装
     npm i commom-cookie
@@ -13,7 +13,7 @@
 
  options可选，例如：
      
-     cookie.set('name','cookie.js',{path:'/',expires:'1',domain:'...',secure:true})    
+     cookie.set('name','cookie.js',{path:'/',expires:1,domain:'...',secure:true})    
 ### 获取cookie某项的值
     cookie.get(pro)    
 
