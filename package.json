@@ -1,0 +1,26 @@
+{
+  "name": "common-cookie",
+  "version": "0.0.4",
+  "description": " Deal with transactions about cookie ",
+  "main": "common-cookie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johnharvy/cookie.js.git"
+  },
+  "keywords": [
+    "cookie"
+  ],
+  "author": "恒星",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Johnharvy/cookie.js/issues"
+  },
+  "homepage": "https://github.com/Johnharvy/cookie.js#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}
